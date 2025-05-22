@@ -40,8 +40,8 @@
         $volume = (4 / 3) * pi() * pow($radius, 3);
 
         // output
-        echo '<p>Radius = ' . $radius . ' mm</p>';
-        echo '<p>Volume = ' . number_format($volume, 2) . ' mm³</p>';
+        echo '<h>Radius = ' . $radius . ' mm<h><br />';
+        echo '<h1>Volume = ' . number_format($volume, 2) . ' mm³</h1>';
         ?>
 
       </div>
