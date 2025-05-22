@@ -31,7 +31,7 @@
       </div>
       <br />
       <div class="page-content">
-        <div>Change Query String to calculate the volume of a sphere</div>
+        <div>Change Query String to calculate the volume of a sphere: </div>
         <?php
         // input
         $radius = floatval($_GET['radius']);
@@ -40,8 +40,8 @@
         $volume = (4 / 3) * pi() * pow($radius, 3);
 
         // output
-        echo '<h>Radius = ' . $radius . ' mm<h><br />';
-        echo '<h1>Volume = ' . number_format($volume, 2) . ' mm³</h1>';
+        echo '<br><br>Radius = ' . $radius . ' mm<br><br>';
+        echo 'Volume = ' . number_format($volume, 2) . ' mm³';
         ?>
 
       </div>
