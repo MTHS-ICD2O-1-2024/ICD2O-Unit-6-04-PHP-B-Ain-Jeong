@@ -29,16 +29,35 @@
       <div class="right-image">
         <img src="./images/volume-of-sphere.jpg" alt="sphere image" width="500" />
       </div>
-        <br />
-          <div class="page-content">
-            <h2>Formula</h2>
-            <h3>V = 4/3 π r³</h3>
-            <br />
-            The radius is:
-            <div id="dimension"></div>
-            <div id="volume"></div>
-          </div>
-        </form>
+      <div class="page-content-answer">
+        <div id="dimension"></div>
+        <div id="volume"></div>
+          <?php
+          $counter = 0;
+
+          // input
+          $firstNumber = $_GET["first-number"];
+          $secondNumber = $_GET["second-number"];
+
+          $originalFirstNumber = $firstNumber;
+
+          // process
+          while ($firstNumber >= $secondNumber) {
+            $firstNumber -= $secondNumber;
+            $counter++;
+
+            if ($firstNumber < $secondNumber) {
+              break;
+            }
+          }
+
+          // output
+          echo $originalFirstNumber . ' ÷ ' . $secondNumber . ' is: ' . $counter . ' R ' . $firstNumber;
+          ?>
+        </div>
+      </div>
+      <div class="page-content-return">
+        <a href="./index.php">Return ...</a>
       </div>
     </main>
   </div>
