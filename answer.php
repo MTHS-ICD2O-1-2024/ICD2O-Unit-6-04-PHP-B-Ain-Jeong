@@ -29,16 +29,23 @@
       <div class="right-image">
         <img src="./images/volume-of-sphere.jpg" alt="sphere image" width="500" />
       </div>
-      <form action="./answer.php" method="GET">
-        <br />
-        <!-- Accent-colored raised button with ripple -->
-        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          type="submit">
-          Calculate
-        </button>
-      </form>
-  </div>
-  </main>
+      <br />
+      <div class="page-content">
+        <div>Change Query String to calculate the volume of a sphere</div>
+        <?php
+        // input
+        $radius = floatval($_GET['radius']);
+
+        // process
+        $volume = (4 / 3) * pi() * pow($radius, 3);
+
+        // output
+        echo '<p>Radius = ' . $radius . ' mm</p>';
+        echo '<p>Volume = ' . number_format($volume, 2) . ' mm³</p>';
+        ?>
+
+      </div>
+    </main>
   </div>
 </body>
 
